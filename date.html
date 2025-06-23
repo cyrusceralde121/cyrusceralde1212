@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Date Night 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('pastel2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .invite-card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 25px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      max-width: 400px;
+      text-align: left;
+      animation: floatIn 1.5s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    .invite-card h2 {
+      color: #d6336c;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .invite-card p {
+      margin: 10px 0;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .highlight {
+      background-color: #ffd6e0;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #c2185b;
+    }
+
+    .emoji {
+      font-size: 1.2em;
+    }
+
+    .details {
+      margin: 1rem 0;
+    }
+
+    .footer {
+      margin-top: 1rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* Floating Hearts */
+    .heart-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .heart {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+      background-size: contain;
+      animation: floatHearts 7s infinite ease-in-out;
+      opacity: 0.6;
+    }
+
+    .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 25%; animation-delay: 1s; }
+    .heart:nth-child(3) { left: 60%; animation-delay: 2s; }
+    .heart:nth-child(4) { left: 80%; animation-delay: 3s; }
+
+    @keyframes floatHearts {
+      0% {
+        bottom: -50px;
+        transform: translateX(0) scale(0.6);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        bottom: 110%;
+        transform: translateX(-20px) scale(1);
+        opacity: 0;
+      }
+    }
+
+    @keyframes floatIn {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="heart-container">
+    <div class="heart" style="animation-duration: 6s;"></div>
+    <div class="heart" style="animation-duration: 5s;"></div>
+    <div class="heart" style="animation-duration: 7s;"></div>
+    <div class="heart" style="animation-duration: 4.5s;"></div>
+  </div>
+
+  <div class="invite-card">
+    <h2>💖✨ Exclusive Invitation ✨💖</h2>
+    <p>Hi Andee,</p>
+    <p>This is your <span class="highlight">official</span> reminder:</p>
+
+    <div class="details">
+      <p><strong>📅 Date:</strong> <span class="highlight">June 24, 2025</span></p>
+      <p><strong>🕖 Time:</strong> 7:00 PM</p>
+      <p><strong>📍 Where:</strong> <span class="highlight">Canto</span></p>
+      <p><strong>👫 With:</strong> Yours truly </p>
+      <p><strong>🎽 Attire:</strong> <span class="highlight"> Black Jacket + Khaki Pants</span></p>
+    </div>
+</body>
+</html>
